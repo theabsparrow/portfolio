@@ -12,9 +12,8 @@ import { TiDeviceDesktop } from "react-icons/ti";
 const getSystemTheme = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
-const ThemeModal = () => {
+const ThemeModal = ({ enabled, setEnabled }) => {
   const [themeModalOpen, setThemeMOdalOpen] = useState(false);
-  const [enabled, setEnabled] = useState(false);
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("system");
   const modalRef = useRef(null);
@@ -84,7 +83,7 @@ const ThemeModal = () => {
         <IoSettingsOutline className="dark:text-white text-gray-900 text-2xl transition-transform duration-500 hover:rotate-180" />
       </button>
       {themeModalOpen && (
-        <section className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.7)] dark:bg-[rgba(255,255,255,0.2)] flex justify-center items-center">
+        <section className="fixed inset-0 z-40 bg-[rgba(0,0,0,0.7)] dark:bg-[rgba(255,255,255,0.2)] flex justify-center items-center">
           <div
             ref={modalRef}
             className="bg-[#c9c9ff] dark:bg-[#05092e] rounded-xl shadow-lg p-6 w-[90%] md:w-[30%] animate-fadeIn"
@@ -146,7 +145,10 @@ const ThemeModal = () => {
               </h1>
               <div className="border border-gray-400 px-2 py-1 rounded-lg">
                 <div
-                  onClick={() => setEnabled(!enabled)}
+                  onClick={() => {
+                    setEnabled(!enabled);
+                    localStorage.setItem("decoration", enabled);
+                  }}
                   className={`w-14 h-6  cursor-pointer
         flex items-center px-1 transition-colors duration-300 rounded-lg
         ${

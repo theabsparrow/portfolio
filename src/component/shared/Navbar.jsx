@@ -19,6 +19,7 @@ import {
   thirdPopupDescription,
   thirdtPopupTitle,
 } from "../githubPopup/githubProp.const";
+import DisplayDecoration from "../displayDecoration/DisplayDecoration";
 
 const Navbar = () => {
   const [modalIndex, setModalIndex] = useState(null);
@@ -28,39 +29,51 @@ const Navbar = () => {
   const [showMenuContent, setShowMenuContent] = useState(false);
   const pathname = usePathname();
   const containerRef = useRef(null);
+  const [enabled, setEnabled] = useState(true);
 
   useEffect(() => {
-    const firstTimer = setTimeout(() => {
-      setModalIndex(0);
-    }, 15000);
-
-    const hideFirstTimer = setTimeout(() => {
-      setModalIndex(null);
-    }, 25000);
-    const secondTimer = setTimeout(() => {
-      setModalIndex(1);
-    }, 35000);
-    const hideSecondTimer = setTimeout(() => {
-      setModalIndex(null);
-    }, 42000);
-
-    const thirdTimer = setTimeout(() => {
-      setModalIndex(2);
-    }, 52000);
-
-    const hideThirdTimer = setTimeout(() => {
-      setModalIndex(null);
-    }, 57000);
-
-    return () => {
-      clearTimeout(firstTimer);
-      clearTimeout(hideFirstTimer);
-      clearTimeout(secondTimer);
-      clearTimeout(hideSecondTimer);
-      clearTimeout(thirdTimer);
-      clearTimeout(hideThirdTimer);
-    };
+    const stored = localStorage.getItem("decoration");
+    if (stored !== null) {
+      setEnabled(stored === "true");
+    }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("decoration", String(enabled));
+  }, [enabled]);
+
+  // useEffect(() => {
+  //   const firstTimer = setTimeout(() => {
+  //     setModalIndex(0);
+  //   }, 15000);
+
+  //   const hideFirstTimer = setTimeout(() => {
+  //     setModalIndex(null);
+  //   }, 25000);
+  //   const secondTimer = setTimeout(() => {
+  //     setModalIndex(1);
+  //   }, 35000);
+  //   const hideSecondTimer = setTimeout(() => {
+  //     setModalIndex(null);
+  //   }, 42000);
+
+  //   const thirdTimer = setTimeout(() => {
+  //     setModalIndex(2);
+  //   }, 52000);
+
+  //   const hideThirdTimer = setTimeout(() => {
+  //     setModalIndex(null);
+  //   }, 57000);
+
+  //   return () => {
+  //     clearTimeout(firstTimer);
+  //     clearTimeout(hideFirstTimer);
+  //     clearTimeout(secondTimer);
+  //     clearTimeout(hideSecondTimer);
+  //     clearTimeout(thirdTimer);
+  //     clearTimeout(hideThirdTimer);
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -100,6 +113,12 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#c9c9ff] dark:bg-[#05092e] shadow-md md:px-56 px-4 py-2">
+        {enabled && (
+          <div className="absolute top-0 z-50">
+            <DisplayDecoration />
+          </div>
+        )}
+
         <section className="flex justify-between h-16 items-center relative py-2">
           <div className=" flex items-center space-x-8">
             <Link href="/">
@@ -155,7 +174,7 @@ const Navbar = () => {
                 <CiMenuFries className="dark:text-white text-gray-900 text-2xl rotate-180" />
               )}
             </button>
-            <ThemeModal />
+            <ThemeModal enabled={enabled} setEnabled={setEnabled} />
           </div>
         </section>
 

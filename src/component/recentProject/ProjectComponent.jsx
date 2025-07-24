@@ -33,7 +33,6 @@ const ProjectComponent = ({ MyProjects }) => {
               }}
               loop={true}
               modules={[Autoplay, Navigation]}
-              navigation={true}
               className="mySwiper"
             >
               <div className="w-full md:h-[80vh]">

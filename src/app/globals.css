@@ -6,18 +6,17 @@
   --foreground: #05092e;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-main: var(--font-inconsolata);
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #05092e;
-    --foreground: #c9c9ff;
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
   }
-} */
+}
 
 [data-theme="dark"] {
   --background: #05092e;
