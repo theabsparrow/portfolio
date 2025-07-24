@@ -83,7 +83,7 @@ const ThemeModal = ({ enabled, setEnabled }) => {
         <IoSettingsOutline className="dark:text-white text-gray-900 text-2xl transition-transform duration-500 hover:rotate-180" />
       </button>
       {themeModalOpen && (
-        <section className="fixed inset-0 z-40 bg-[rgba(0,0,0,0.7)] dark:bg-[rgba(255,255,255,0.2)] flex justify-center items-center">
+        <section className="fixed inset-0 z-60 bg-[rgba(0,0,0,0.7)] dark:bg-[rgba(255,255,255,0.2)] flex justify-center items-center">
           <div
             ref={modalRef}
             className="bg-[#c9c9ff] dark:bg-[#05092e] rounded-xl shadow-lg p-6 w-[90%] md:w-[30%] animate-fadeIn"

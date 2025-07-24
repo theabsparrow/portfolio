@@ -114,7 +114,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#c9c9ff] dark:bg-[#05092e] shadow-md md:px-56 px-4 py-2">
         {enabled && (
-          <div className="absolute top-0 z-50">
+          <div className="absolute top-0 z-50 pointer-events-none">
             <DisplayDecoration />
           </div>
         )}
