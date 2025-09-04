@@ -21,17 +21,23 @@ Welcome to my **Portfolio Website**, built to showcase my projects, technical sk
 
 ---
 
-## 🛠️ Tech Stack
+## Technologies I have used
 
-| Category        | Technologies                          |
-| --------------- | ------------------------------------- |
-| Frontend        | Next.js / React / HTML5 / CSS3 / SCSS |
-| Styling         | Tailwind CSS / CSS Modules            |
-| Animation       | Framer Motion / CSS Animations / SVG  |
-| Deployment      | Vercel / Netlify / GitHub Pages       |
-| Version Control | Git & GitHub                          |
-
----
+- JavaScript
+- React.js
+- Next.js
+- Tailwind CSS
+- tailwind-merge
+- EmailJs
+- react-hook-form
+- Aceternity UI
+- React motion
+- Lucid React
+- React icons
+- Sonner
+- Swiper-slider
+- React-fast-marque
+- markdown-to-jsx
 
 ## 📂 Folder Structure
 
@@ -61,17 +67,43 @@ portfolio/
 
 # Clone the repository
 
+``
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
 
+``
+
 # Install dependencies
 
-npm install
+`bash
+npm install`
 
 # Run the development server
 
+``
+bash
 npm run dev
 
-```
+``
 
-```
+## There is a .env.example file also from there you can get the env information also
+
+.env.local
+
+``
+
+# Third-Party APIs
+
+# -------------------------------
+
+NEXT_PUBLIC_GITHUB_TOKEN= token from your github
+NEXT_PUBLIC_GITHUB_LINK=https://www.github.com/theabsparrow
+NEXT_PUBLIC_RESUME_LINK=https://drive.google.com/file/d/1TF1mvq_BTmJhPqhyeyIYNRKgiyeO42HW/view?usp=sharing
+
+# email js key and id
+
+NEXT_PUBLIC_SERVICE_ID= emailJS service ID
+NEXT_PUBLIC_TEMPLATE_ID= emailJS template ID
+NEXT_PUBLIC_PUBLIC_KEY= EmailJS Public Key
+
+``
