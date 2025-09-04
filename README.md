@@ -97,10 +97,7 @@ npm run dev
 
 NEXT_PUBLIC_GITHUB_TOKEN= token from your github
 NEXT_PUBLIC_GITHUB_LINK=https://www.github.com/theabsparrow
-NEXT_PUBLIC_RESUME_LINK=https://drive.google.com/file/d/1TF1mvq_BTmJhPqhyeyIYNRKgiyeO42HW/view?usp=sharing
-
-# email js key and id
-
+NEXT_PUBLIC_RESUME_LINK=Your resume link
 NEXT_PUBLIC_SERVICE_ID= emailJS service ID
 NEXT_PUBLIC_TEMPLATE_ID= emailJS template ID
 NEXT_PUBLIC_PUBLIC_KEY= EmailJS Public Key
