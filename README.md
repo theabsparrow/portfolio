@@ -68,6 +68,7 @@ portfolio/
 # Clone the repository
 
 ```
+bash
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
 
@@ -75,25 +76,23 @@ cd portfolio
 
 # Install dependencies
 
-`bash
-npm install`
+```
+bash
+npm install
+```
 
 # Run the development server
 
-``
+```
 bash
 npm run dev
 
-``
+```
 
 ## There is a .env.example file also from there you can get the env information also
 
+```
 .env.local
-
-``
-
-# Third-Party APIs
-
 # -------------------------------
 
 NEXT_PUBLIC_GITHUB_TOKEN= token from your github
@@ -106,4 +105,4 @@ NEXT_PUBLIC_SERVICE_ID= emailJS service ID
 NEXT_PUBLIC_TEMPLATE_ID= emailJS template ID
 NEXT_PUBLIC_PUBLIC_KEY= EmailJS Public Key
 
-``
+```
