@@ -107,19 +107,18 @@ const CoreSkills = () => {
               {techLogo.map((skill) => (
                 <div
                   key={skill.name}
-                  className="bg-white/40 dark:bg-gray-500 p-3 md:p-4 shadow-lg rounded-xl "
+                  className="bg-white/40 dark:bg-gray-500 p-3 lg:p-4 shadow-lg rounded-xl "
                 >
-                  <div className="transform rotate-45 flex flex-col items-center">
-                    <div className="relative h-6 w-6 md:w-24 md:h-16">
+                  <div className="transform rotate-45 flex flex-col items-center ">
+                    <div className="relative w-8 lg:w-16 ">
                       <Image
                         src={skill.image}
                         alt={skill.name}
-                        fill
-                        sizes="(min-width: 768px) 96px, 32px"
-                        className="object-contain"
+                        height={700}
+                        width={700}
                       />
                     </div>
-                    <p className="text-sm md:text-lg dark:text-gray-950 font-semibold">
+                    <p className="text-xs lg:text-base dark:text-gray-950 font-semibold">
                       {skill.name}
                     </p>
                   </div>
