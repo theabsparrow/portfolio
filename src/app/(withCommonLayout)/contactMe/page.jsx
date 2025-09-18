@@ -1,4 +1,5 @@
 import ContactComponent from "@/component/contact/ContactComponent";
+
 export const metadata = {
   title: "Contact Me - Abul Bashar",
   description:
