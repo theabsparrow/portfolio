@@ -36,7 +36,7 @@ const GithubState = () => {
       {!stats || commits === null ? (
         <SkeletonLoader />
       ) : (
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0 mt-2">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 lg:gap-0">
           {githubStats.map((githubStat) => (
             <Link
               key={githubStat?.name}

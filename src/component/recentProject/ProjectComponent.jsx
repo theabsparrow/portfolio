@@ -45,7 +45,7 @@ const ProjectComponent = ({ MyProjects }) => {
                         alt={image.name}
                         height={1200}
                         width={1200}
-                        className="object-contain md:w-[70vw] rounded-xl ease-in-out cursor-zoom-in hover:brightness-75 duration-500"
+                        className="object-contain w-full rounded-xl ease-in-out cursor-zoom-in hover:brightness-75 duration-500"
                       />
                     </Link>
                   </SwiperSlide>

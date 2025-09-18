@@ -78,14 +78,14 @@ const Navbar = () => {
   useEffect(() => {
     if (!open) return;
 
-    function handleClickOutside(event) {
+    const handleClickOutside = (event) => {
       if (
         containerRef.current &&
         !containerRef.current.contains(event.target)
       ) {
         setTimeout(() => setOpen(false), 0);
       }
-    }
+    };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -112,7 +112,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#c9c9ff] dark:bg-[#05092e] shadow-md md:px-56 px-4 py-2">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#c9c9ff] dark:bg-[#05092e] shadow-md lg:px-[8vw] px-4 py-2">
         {enabled && (
           <div className="absolute top-0 z-50 pointer-events-none">
             <DisplayDecoration />

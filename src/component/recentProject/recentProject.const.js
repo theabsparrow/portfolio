@@ -13,7 +13,7 @@ export const projects = [
       { name: "dailyDishBanner-3", path: "/dailyDishBanner-3.webp" },
     ],
     links: [
-      { name: "Live Link", path: "https://mealbx-client.vercel.app/" },
+      { name: "Live Link", path: "https://dailydish-six.vercel.app/" },
       {
         name: "Github Client",
         path: "https://github.com/theabsparrow/assignment-six-client.git",

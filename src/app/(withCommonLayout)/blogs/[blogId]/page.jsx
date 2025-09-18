@@ -5,7 +5,7 @@ const BlogId = async ({ params }) => {
   const { blogId } = await params;
   const blogData = blogs.find((blog) => blog.id === blogId);
   return (
-    <section className="md:px-56 px-4 mt-24 md:mt-28 space-y-4">
+    <section className="mt-20 space-y-4">
       <SingleBlogComponent blogData={blogData} />
     </section>
   );

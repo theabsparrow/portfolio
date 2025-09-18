@@ -9,11 +9,10 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#c9c9ff] dark:bg-[#05092e] md:px-56 px-4 mt-16 pb-6">
-      <hr className="my-6 dark:border-gray-400 border-gray-700" />
-      <section className="md:hidden grid grid-cols-2 gap-5 justify-center ">
+    <footer className="bg-[#c9c9ff] dark:bg-[#05092e] lg:px-[8vw] px-4 lg:mt-16 mt-8 py-6 border-t dark:border-gray-400 border-gray-700">
+      <section className="lg:hidden grid grid-cols-2 gap-5 justify-center ">
         <div className="flex flex-col items-start  gap-2 mx-auto">
-          <p className="text-lg text-gray-800 dark:text-white">
+          <p className="text-lg text-gray-800 dark:text-white font-semibold">
             Important Links
           </p>
           {importantLinks.map((link, index) => {
@@ -33,7 +32,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-start gap-2  mx-auto">
-          <p className="text-lg text-gray-800 dark:text-white">Contact me</p>
+          <p className="text-lg text-gray-800 dark:text-white font-semibold">
+            Contact me
+          </p>
           {contactMeLinks.map((link, index) => (
             <Link
               key={index}
@@ -58,7 +59,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <h1 className="text-3xl font-semibold text-center">Abul Bashar</h1>
+          <h1 className="text-3xl font-semibold text-center ">Abul Bashar</h1>
           <p className="text-sm text-center ">
             {" "}
             &copy; {new Date().getFullYear()} All rights reserved.
@@ -66,7 +67,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-start gap-2 mx-auto ">
-          <p className="text-lg text-gray-800 dark:text-white">Social Links</p>
+          <p className="text-lg text-gray-800 dark:text-white font-semibold">
+            Social Links
+          </p>
           {socialLinks.map((link, index) => (
             <Link
               key={index}
@@ -80,7 +83,7 @@ const Footer = () => {
           ))}
         </div>
       </section>
-      <section className="hidden md:flex justify-between items-start space-y-0 mt-8">
+      <section className="hidden lg:flex justify-between items-start space-y-0">
         <div className="flex flex-col items-center space-y-3 ">
           <div>
             <Link href="/">
@@ -101,7 +104,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-start  gap-2 ">
-          <p className="text-lg text-gray-800 dark:text-white">
+          <p className="text-lg text-gray-800 dark:text-white font-bold">
             Important Links
           </p>
           {importantLinks.map((link, index) => {
@@ -121,7 +124,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-start gap-2  ">
-          <p className="text-lg text-gray-800 dark:text-white">Contact me</p>
+          <p className="text-lg text-gray-800 dark:text-white font-bold">
+            Contact me
+          </p>
           {contactMeLinks.map((link, index) => (
             <Link
               key={index}
@@ -136,7 +141,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-start gap-2  ">
-          <p className="text-lg text-gray-800 dark:text-white">Social Links</p>
+          <p className="text-lg text-gray-800 dark:text-white font-bold">
+            Social Links
+          </p>
           {socialLinks.map((link, index) => (
             <Link
               key={index}

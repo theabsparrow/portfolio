@@ -8,8 +8,8 @@ import { config } from "@/config";
 
 const AboutMe = () => {
   return (
-    <section className=" flex flex-col md:flex-row justify-between items-center gap-12">
-      <div className="space-y-3 md:space-y-5">
+    <section className=" flex flex-col lg:flex-row justify-between items-center gap-10">
+      <div className="space-y-3 lg:space-y-5 w-full">
         <h1 className="text-2xl md:text-3xl font-bold">About Me.</h1>
         <p className="flex flex-col space-y-2 md:space-y-5 text-lg md:text-xl">
           {aboutMeParagraph.map((para, i) => (

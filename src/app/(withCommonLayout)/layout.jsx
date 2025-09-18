@@ -5,7 +5,7 @@ const CommonLayout = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-screen lg:px-[8vw] px-2">{children}</main>
       <Footer />
     </div>
   );

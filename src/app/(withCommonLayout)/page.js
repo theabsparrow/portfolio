@@ -6,7 +6,7 @@ import RecentProject from "@/component/recentProject/RecentProject";
 
 const Home = () => {
   return (
-    <section className="md:px-56 px-4 space-y-16 md:space-y-28">
+    <section className=" space-y-8 lg:space-y-16">
       <Banner />
       <AboutMe />
       <RecentProject />

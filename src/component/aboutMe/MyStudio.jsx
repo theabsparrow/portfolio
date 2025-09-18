@@ -6,7 +6,7 @@ import { FaPaintBrush } from "react-icons/fa";
 
 const MyStudio = () => {
   return (
-    <section className="bg-gray-950 rounded-xl p-4 md:p-8">
+    <section className="bg-gray-950 rounded-xl p-4 lg:p-8 w-full">
       <div className="space-y-2 md:space-y-4">
         <h1 className="text-white/75 flex items-center text-xl gap-2 font-semibold">
           <span className="text-2xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 p-1 rounded-lg">
