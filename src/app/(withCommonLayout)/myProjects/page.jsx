@@ -2,7 +2,13 @@ import ProjectComponent from "@/component/recentProject/ProjectComponent";
 import { projects } from "@/component/recentProject/recentProject.const";
 import { GrProjects } from "react-icons/gr";
 
-const page = () => {
+export const metadata = {
+  title: "My Work - Abul Bashar",
+  description:
+    "All the projects done by me is showed here with essential links and pictures as well as shoer description to check the users reaction.",
+};
+
+const MyProjectPage = () => {
   return (
     <section className="mt-20 space-y-4">
       <div className="space-y-4">
@@ -25,4 +31,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MyProjectPage;

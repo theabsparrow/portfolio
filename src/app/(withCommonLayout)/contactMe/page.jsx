@@ -1,6 +1,10 @@
 import ContactComponent from "@/component/contact/ContactComponent";
-
-const page = () => {
+export const metadata = {
+  title: "Contact Me - Abul Bashar",
+  description:
+    "This page is handling the contact system. Including he social methos and the email method also is availabe here.",
+};
+const ContactPage = () => {
   return (
     <section className="mt-20 space-y-10">
       <div className="space-y-4">
@@ -19,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;

@@ -1,6 +1,10 @@
 import BlogComponent from "@/component/blogComponent/BlogComponent";
-
-const page = () => {
+export const metadata = {
+  title: "Blogs - Abul Bashar",
+  description:
+    "Here the blogs about development or coding related is published here. This is full responsible for blogging",
+};
+const BlogPage = () => {
   return (
     <section className="mt-20 space-y-4">
       <div className="space-y-4">
@@ -22,4 +26,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPage;

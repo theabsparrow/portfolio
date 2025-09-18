@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const FullImageComponent = ({ imageName }) => {
   const [isZoomed, setIsZoomed] = useState(false);
-  console.log(isZoomed);
   const toggleZoom = () => {
     setIsZoomed((prev) => !prev);
   };
