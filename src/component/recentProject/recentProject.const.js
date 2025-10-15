@@ -32,12 +32,12 @@ export const projects = [
     from: "February 4, 2025",
     to: "Now",
     images: [
-      { name: "dailyDishBanner-1", path: "/dailyDishBanner-1.webp" },
-      { name: "dailyDishBanner-2", path: "/dailyDishBanner-2.webp" },
-      { name: "dailyDishBanner-3", path: "/dailyDishBanner-3.webp" },
+      { name: "lamboCar-banner-1", path: "/lamboCar-banner-1.webp" },
+      { name: "lamboCar-banner-2", path: "/lamboCar-banner-2.webp" },
+      { name: "lamboCar-banner-3", path: "/lamboCar-banner-3.webp" },
     ],
     links: [
-      { name: "Live Link", path: "https://lambo-car-frontend.vercel.app/" },
+      { name: "Live Link", path: "https://lambo-car.vercel.app/" },
       {
         name: "Github Client",
         path: "https://github.com/theabsparrow/Assignment-four-client",

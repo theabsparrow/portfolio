@@ -18,9 +18,17 @@ const GithubState = () => {
   }, []);
 
   useEffect(() => {
-    fetch("/api/github-commits")
-      .then((res) => res.json())
-      .then((data) => setCommits(data.commits));
+    const fetchCommits = async () => {
+      try {
+        const res = await fetch("/api/github-commits");
+        if (!res?.ok) return setCommits(0);
+        const data = await res.json();
+        setCommits(data?.totalCommits);
+      } catch (error) {
+        console.error("Error fetching commits:", error);
+      }
+    };
+    fetchCommits();
   }, []);
 
   const githubStats = [
