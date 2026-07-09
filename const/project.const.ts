@@ -1,0 +1,67 @@
+import { usedTechnology1, usedTechnology2, UsedTechnologyType } from "./usedTechnology";
+
+export type TImages = {
+  name: string;
+  path: string;
+};
+
+export type TProjects = {
+  projectName: string;
+  description: string;
+  from: string;
+  to: string;
+  images: TImages[];
+  links: TImages[];
+  usedTechnology: UsedTechnologyType[];
+};
+
+export const projects: TProjects[] = [
+  {
+    projectName: "Daily Dish",
+    description:
+      "This is a meal service whith some unique feature where user can create a plan or more to maintain a meal from a certain kitchen",
+    from: "April 16, 2025",
+    to: "June 1, 2025",
+    images: [
+      { name: "dailyDishBanner-1", path: "/dailyDishBanner-1.webp" },
+      { name: "dailyDishBanner-2", path: "/dailyDishBanner-2.webp" },
+      { name: "dailyDishBanner-3", path: "/dailyDishBanner-3.webp" },
+    ],
+    links: [
+      { name: "Live Link", path: "https://dailydish-six.vercel.app/" },
+      {
+        name: "Github Client",
+        path: "https://github.com/theabsparrow/assignment-six-client.git",
+      },
+      {
+        name: "Github Server",
+        path: "https://github.com/theabsparrow/assignment-six-server.git",
+      },
+    ],
+    usedTechnology: usedTechnology1,
+  },
+  {
+    projectName: "Lambo Car",
+    description:
+      "This is all about car. user can search for their favorite car with matched brand and model with car. The admin has an important role. With a proper live delivery tracking user can select and by his selected car",
+    from: "February 4, 2025",
+    to: "Now",
+    images: [
+      { name: "dailyDishBanner-1", path: "/dailyDishBanner-1.webp" },
+      { name: "dailyDishBanner-2", path: "/dailyDishBanner-2.webp" },
+      { name: "dailyDishBanner-3", path: "/dailyDishBanner-3.webp" },
+    ],
+    links: [
+      { name: "Live Link", path: "https://lambo-car-frontend.vercel.app/" },
+      {
+        name: "Github Client",
+        path: "https://github.com/theabsparrow/Assignment-four-client",
+      },
+      {
+        name: "Github Server",
+        path: "https://github.com/theabsparrow/Assignemnt-four-server",
+      },
+    ],
+    usedTechnology: usedTechnology2,
+  },
+];
